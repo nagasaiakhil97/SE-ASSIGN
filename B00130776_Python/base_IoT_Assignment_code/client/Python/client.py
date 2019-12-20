@@ -1,24 +1,23 @@
+import xml.etree.ElementTree as elet
+import numpy as np
 import urllib.request
-import xml.etree.ElementTree as ET
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pplot
 
 response = urllib.request.urlopen("http://localhost:8080/")
+TimeValue = []
+TempValue = []
 data = response.read().decode()
+root = elet.fromstring(data.strip("\n"))
 
-root = ET.fromstring(data.strip("\n"))
-
-temperatureList = []
-timeList = []
 for reading in root.findall('reading'):
     time = reading.find('time').text
-    timeList.append(time[time.find(' '):])
-    temperatureList.append(int(reading.find('temperature').text))
-
-plt.style.use('ggplot')
-plt.title("Temperature Vs Time")
-plt.xlabel("Time")
-plt.ylabel("Temperature")
-plt.grid(True)
-plt.plot(timeList, temperatureList, 'ro-')
-plt.show()
-
+    TimeValue.append(time[time.find(' '):])
+    TempValue.append(int(reading.find('temperature').text))
+    
+pplot.style.use('ggplot')
+title_obj = pplot.title('Temperature Vs Time')
+pplot.setp(title_obj, fontsize = '16', fontname = 'calibri', color = 'orange')
+pplot.plot(TimeValue, TempValue, 'purple')
+pplot.xlabel('Time')
+pplot.ylabel('Temperature')
+pplot.show()
