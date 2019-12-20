@@ -1,0 +1,11 @@
+<readings>
+<reading><time>Sat Dec 14 20:01:26 2019</time><temperature>33</temperature></reading>
+<reading><time>Sat Dec 14 20:01:42 2019</time><temperature>20</temperature></reading>
+<reading><time>Sat Dec 14 20:01:57 2019</time><temperature>32</temperature></reading>
+<reading><time>Sat Dec 14 20:02:12 2019</time><temperature>30</temperature></reading>
+<reading><time>Sat Dec 14 20:02:27 2019</time><temperature>16</temperature></reading>
+<reading><time>Sat Dec 14 20:02:42 2019</time><temperature>25</temperature></reading>
+<reading><time>Sat Dec 14 20:02:57 2019</time><temperature>35</temperature></reading>
+<reading><time>Sat Dec 14 20:03:12 2019</time><temperature>24</temperature></reading>
+<reading><time>Sat Dec 14 20:03:27 2019</time><temperature>17</temperature></reading>
+</readings>
